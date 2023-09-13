@@ -20,6 +20,13 @@ class HousesService{
         AppState.activeHouse = new House(res.data)
     }
 
+    async createHouse(houseData){
+        const res = await api.post('api/houses', houseData)
+        logger.log('Nueva Casa', res.data)
+        const newHouse = new House(res.data)
+        AppState.houses.push(newHouse)
+        return newHouse
+    }
 
 
 

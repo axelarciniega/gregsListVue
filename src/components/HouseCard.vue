@@ -1,4 +1,7 @@
 <template>
+
+
+
     <router-link :to="{name: 'House Details', params: {houseId: house.id}}">
 
         <div class="card elevation-5 my-3 house-card">

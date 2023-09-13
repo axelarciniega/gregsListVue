@@ -1,4 +1,7 @@
 <template>
+
+     <HouseForm/>
+
     <section class="row">
         <div v-for="house in houses" :key="house.id" class="col-12">
             <!--NOTE this works {{ house.year }} {{ house.price }} -->
