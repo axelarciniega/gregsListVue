@@ -1,6 +1,25 @@
 <template>
-    House
-    {{ activeHouse}}
+   
+    <section class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <img class="active-img" :src="activeHouse.imgUrl" alt="">
+        </div>
+        <div class="col-6">
+            <h1> ${{ activeHouse.price }}</h1>
+            <h3> Year: {{ activeHouse.year }}</h3>
+        </div>
+        <div class="col-6">
+            <h1>info:</h1>
+            <span>{{ activeHouse.bathrooms }} bathrooms, {{ activeHouse.bedrooms }} bedrooms, {{ activeHouse.levels }} levels</span>
+            <div>
+                <h1>Description</h1>
+            </div>
+            <div>
+                <i>{{ activeHouse.description }}</i>
+            </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center mt-5"> {{ activeHouse.creator.name }} <img class="profile-pic" :src="activeHouse.creator.picture" alt=""></div>
+    </section>
 </template>
 
 
@@ -41,6 +60,19 @@ export default{
 </script>
 
 
+
+
 <style lang="scss" scoped>
+
+ .profile-pic{
+        border-radius: 24%;
+        height: 7vh;
+    }
+
+.active-img{
+    width: 60vh;
+    height: 60vh;
+}
+
 
 </style>
